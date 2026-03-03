@@ -2,3 +2,5 @@
 
 /.anchor
 /.disasm
+
+/fishing/*.cs

@@ -1,0 +1,30 @@
+{
+    "name": "mikufish",
+    "references": [
+        "Unity.Burst",
+        "Unity.Collections",
+        "Unity.Entities",
+        "Unity.Entities.Hybrid",
+        "Unity.Jobs",
+        "Unity.Mathematics",
+        "Unity.NetCode",
+        "Unity.NetCode.Physics",
+        "Unity.Networking.Transport",
+        "Unity.Physics",
+        "Unity.Physics.Hybrid",
+        "Unity.Properties",
+        "Unity.Transforms",
+        "PugMod.SDK"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+	"PugMod.SDK.Runtime.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "useGUIDs": false
+}
