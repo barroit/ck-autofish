@@ -13,12 +13,11 @@ AssetBundle assets;
 
 public void EarlyInit()
 {
-	Debug.Log("mikumiku");
+	state.fs = API.ConfigFilesystem;
 }
 
 public void Init()
 {
-	//
 }
 
 public void Update()

@@ -3,4 +3,4 @@
 /.anchor
 /.disasm
 
-/fishing/*.cs
+/core/*.cs

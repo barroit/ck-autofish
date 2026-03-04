@@ -21,6 +21,7 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
+	"Pug.Other.dll",
 	"PugMod.SDK.Runtime.dll"
     ],
     "autoReferenced": false,

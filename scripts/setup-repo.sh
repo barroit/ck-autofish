@@ -5,6 +5,6 @@ set -e
 
 dst=ck/sdk/Assets
 
-ln -snf $PWD/fishing $dst/mikufish
+ln -snf $PWD/core $dst/mikufish
 
 find *.asset *.meta -exec realpath {} + | xargs -x ln -snft $dst
