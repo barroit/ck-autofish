@@ -53,12 +53,12 @@ protected override void OnCreate()
 	entctl_set_cd(ent, spoof);
 
 	var hw_input_rw = ct_rw_of(hw_input_view);
-	var hotbar_slot_rw = ct_ro_of(hotbar_slot);
-	var fishing_state_rw = ct_ro_of(fishing_state);
-	var local_ghost_rw = ct_ro_of(local_ghost);
+	var hotbar_slot_ro = ct_ro_of(hotbar_slot);
+	var fishing_state_ro = ct_ro_of(fishing_state);
+	var local_ghost_ro = ct_ro_of(local_ghost);
 
-	player_query = GetEntityQuery(hw_input_rw, hotbar_slot_rw,
-				      fishing_state_rw, local_ghost_rw);
+	player_query = GetEntityQuery(hw_input_rw, hotbar_slot_ro,
+				      fishing_state_ro, local_ghost_ro);
 	RequireForUpdate(player_query);
 }
 
