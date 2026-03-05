@@ -17,7 +17,7 @@ ISOLATE_BEGIN
 
 public struct spoof_cd : IComponentData {
 	public TickTimer tmr;
-	public float delay;
+	public float hold;
 	public bool enabled;
 }
 
@@ -35,9 +35,9 @@ protected override void OnCreate()
 {
 	var spoof_in = state.load();
 
-	if (spoof_in.delay == 0f) {
+	if (spoof_in.hold == 0f) {
 		spoof_in.__enabled = true;
-		spoof_in.delay = 0.2f;
+		spoof_in.hold = 0.2f;
 		state.save(spoof_in);
 	}
 
@@ -46,7 +46,7 @@ protected override void OnCreate()
 
 	var spoof = new spoof_cd {
 		tmr = new TickTimer(39),
-		delay = spoof_in.delay,
+		hold = spoof_in.hold,
 		enabled = spoof_in.__enabled,
 	};
 
@@ -110,7 +110,7 @@ protected override void OnUpdate()
 	}
 
 	if (state.fishIsNibbling && !state.isFishingAtOctopusBoss)
-		spoof.tmr.Start(tick, spoof.delay, sim_tps);
+		spoof.tmr.Start(tick, spoof.hold, sim_tps);
 
 done:
 	__input_view.ValueRW = uu_cast(hw_input, hw_input_view, ref input);

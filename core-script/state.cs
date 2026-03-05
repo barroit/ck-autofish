@@ -15,7 +15,7 @@ ISOLATE_BEGIN
 [Serializable]
 public struct spoof {
 	public bool __enabled;
-	public float delay;
+	public float hold;
 }
 
 public class state {
