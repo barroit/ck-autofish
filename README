@@ -2,15 +2,3 @@ ck-autofish
 ===========
 
 Auto fishing mod for Core Keeper.
-
-Note
-====
-
-To make symlinks work, you need to use Proton. This stops Core Keeper to using
-
-	$HOME/.config/unity3d/Pugstorm/Core\ Keeper
-
-and instead uses
-
-	.anchor/compatdata/1621690/pfx/
-	drive_c/users/steamuser/AppData/LocalLow/Pugstorm/Core\ Keeper

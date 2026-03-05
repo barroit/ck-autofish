@@ -1,0 +1,37 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+
+div.bodywrapper {
+	margin-left: 17rem;
+}
+
+@media screen and (max-width: 65em) {
+
+div.bodywrapper {
+	margin: 0;
+}
+
+} /* @media screen and (max-width: 65em) */
+
+div.document {
+	width: auto;
+}
+
+div.footer {
+	margin: 2rem 0 0 17rem;
+}
+
+div.toctree-wrapper > ul > li {
+	margin-top: 0.8rem;
+}
+
+div.toc-content > ul > li > ul > li {
+	margin-top: 0.3rem;
+}
+
+div.sphinxsidebarwrapper p.logo {
+	text-align: left;
+}
+
+img.logo {
+	width: 7rem;
+}

@@ -4,5 +4,6 @@
    "search.exclude": {
       "ck/**": true,
       "core/*.cs": true
-   }
+   },
+   "chatgpt.commentCodeLensEnabled": false
 }
