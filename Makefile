@@ -18,7 +18,7 @@ icon-y  := $(subst images,core,$(icon-in))
 pp: $(script-y) $(icon-y)
 
 $(script-y): core/%: core-script/% $(m4-in)
-	$(m4) $${NDEBUG:+-DNDEBUG} $(patch-m4) $(helper-m4) $< >$@
+	$(m4) $(patch-m4) $(helper-m4) $< >$@
 
 $(icon-y): core/%: images/%
 	cp $< $@

@@ -22,11 +22,7 @@ public class state {
 
 public static void save(in spoof spoof)
 {
-ifdef([[NDEBUG]], [[dnl
-	string json = JsonUtility.ToJson(spoof);
-]], [[dnl
-	string json = JsonUtility.ToJson(spoof, prettyPrint: true);
-]])dnl
+	string json = JsonUtility.ToJson(spoof, true);
 	byte[] raw = Encoding.UTF8.GetBytes(json);
 
 	mod_fs.Write(CONFIG, raw);
