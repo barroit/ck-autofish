@@ -10,10 +10,6 @@ ISOLATE_BEGIN
 
 public class init : IMod {
 
-GameObject btn;
-
-int prev_size = -39;
-
 public void Init()
 {
 	var mikufish = mod_ctl.GetMod("NAME");
@@ -21,28 +17,16 @@ public void Init()
 
 	var prefab = assets.LoadAsset<GameObject>("SWITCH_PREFAB");
 	var parent = ui_player_inv.transform.GetChild(0);
+	var btn = Object.Instantiate(prefab, parent, false);
 
-	btn = Object.Instantiate(prefab, parent, false);
+	var pos_z = btn.transform.localPosition.z;
+	var pos = new Vector3(7.6125f, 0.3125f, pos_z);
+
+	btn.transform.localPosition = pos;
 	btn.SetActive(true);
 }
 
-public void Update()
-{
-	if (!ui_has_player_inv)
-		return;
-
-	var inv = ui_player_inv.GetInventoryHandler();
-	int next_size = inv.size;
-
-	if (prev_size == next_size)
-		return;
-
-	var z = btn.transform.localPosition.z;
-	var pos = new Vector3(7.6125f, 0.3125f, z);
-
-	btn.transform.localPosition = pos;
-	prev_size = next_size;
-}
+public void Update() {}
 
 public void EarlyInit() {}
 
