@@ -24,9 +24,9 @@ public struct spoof_cd : IComponentData {
 [WorldSystemFilter(WorldSystemFilterFlags.ClientSimulation)]
 [UpdateInGroup(typeof(RunSimulationSystemGroup), OrderLast = true)]
 [UpdateAfter(typeof(SendClientInputSystem))]
-public partial class spoof_system : SystemBase {
+public partial class spoof_sys : SystemBase {
 
-public static Entity spoof_ent;
+public static Entity ent;
 public static EntityManager entctl;
 
 EntityQuery player_query;
@@ -42,7 +42,7 @@ protected override void OnCreate()
 	}
 
 	entctl = EntityManager;
-	spoof_ent = entctl_mk_single(spoof_cd);
+	ent = entctl_mk_single(spoof_cd);
 
 	var spoof = new spoof_cd {
 		tmr = new TickTimer(39),
@@ -50,7 +50,7 @@ protected override void OnCreate()
 		enabled = spoof_in.__enabled,
 	};
 
-	entctl_set_cd(spoof_ent, spoof);
+	entctl_set_cd(ent, spoof);
 
 	var hw_input_rw = ct_rw_of(hw_input_view);
 	var hotbar_slot_rw = ct_ro_of(hotbar_slot);

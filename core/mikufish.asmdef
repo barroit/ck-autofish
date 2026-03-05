@@ -21,6 +21,7 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
+        "I2.dll",
 	"Pug.Base.dll",
 	"Pug.ECS.Components.dll",
 	"Pug.ECS.Extensions.dll",

@@ -20,8 +20,6 @@ public struct spoof {
 
 public class state {
 
-public static IConfigFilesystem fs;
-
 public static void save(in spoof spoof)
 {
 ifdef([[NDEBUG]], [[dnl
@@ -31,15 +29,15 @@ ifdef([[NDEBUG]], [[dnl
 ]])dnl
 	byte[] raw = Encoding.UTF8.GetBytes(json);
 
-	fs.Write(CONFIG, raw);
+	mod_fs.Write(CONFIG, raw);
 }
 
 public static spoof load()
 {
-	if (!fs.FileExists(CONFIG))
+	if (!mod_fs.FileExists(CONFIG))
 		return default;
 
-	byte[] buf = fs.Read(CONFIG);
+	byte[] buf = mod_fs.Read(CONFIG);
 	string json = Encoding.UTF8.GetString(buf);
 
 	try {

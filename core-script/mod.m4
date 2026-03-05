@@ -3,6 +3,7 @@ dnl
 divert(-1)
 
 define(NAME, mikufish)
+define(SWITCH_PREFAB, Assets/mikufish/switch.prefab)
 
 define(ISOLATE_BEGIN, using NAME; namespace NAME {)
 define(ISOLATE_END, })
