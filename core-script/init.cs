@@ -6,10 +6,9 @@
 using PugMod;
 using UnityEngine;
 
-public class init : IMod {
+ISOLATE_BEGIN
 
-LoadedMod mod;
-AssetBundle assets;
+public class init : IMod {
 
 public void EarlyInit()
 {
@@ -34,3 +33,5 @@ public void ModObjectLoaded(Object _) {}
 public void Shutdown() {}
 
 } /* class mikufish */
+
+ISOLATE_END

@@ -21,7 +21,11 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
+	"Pug.Base.dll",
+	"Pug.ECS.Components.dll",
+	"Pug.ECS.Extensions.dll",
 	"Pug.Other.dll",
+	"Pug.UnityExtensions.dll",
 	"PugMod.SDK.Runtime.dll"
     ],
     "autoReferenced": false,

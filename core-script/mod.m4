@@ -4,4 +4,7 @@ divert(-1)
 
 define(NAME, mikufish)
 
+define(ISOLATE_BEGIN, using NAME; namespace NAME {)
+define(ISOLATE_END, })
+
 divert(0)dnl
