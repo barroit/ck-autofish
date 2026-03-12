@@ -19,8 +19,13 @@ public void Init()
 	var parent = ui_player_inv.transform.GetChild(0);
 	var btn = Object.Instantiate(prefab, parent, false);
 
-	var pos_z = btn.transform.localPosition.z;
-	var pos = new Vector3(7.6125f, 0.3125f, pos_z);
+	/*
+	 * base: -7.625 -2.375
+	 * per icon
+	 *   size: 1
+	 *   gap:  0.0625
+	 */
+	var pos = new Vector3(-8.6875f, -2.375f, 0);
 
 	btn.transform.localPosition = pos;
 	btn.SetActive(true);

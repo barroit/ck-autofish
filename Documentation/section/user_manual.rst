@@ -7,8 +7,8 @@ User Manual
 This mod is dead simple. The only thing you can configure is how long it holds
 the interaction button after a fish bites.
 
-There's an in-game button to enable or disable auto fishing. It's on the right
-side of your inventory, opposite the trashcan.
+There's an in-game button to enable or disable auto fishing. It's on the left
+side of your inventory, under the trashcan.
 
 You can still edit the configuration file directly for ``hold``.
 
